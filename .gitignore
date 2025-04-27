@@ -1,0 +1,13 @@
+out
+*.db
+.env
+assets/
+samples/
+
+# AWS credentials and config
+.aws/
+aws.json
+credentials
+.aws-config
+*.pem
+awscliv2.zip
