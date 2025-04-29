@@ -10,3 +10,4 @@ aws.json
 credentials
 .aws-config
 *.pem
+awscliv2.zip
