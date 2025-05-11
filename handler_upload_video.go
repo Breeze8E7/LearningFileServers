@@ -121,9 +121,8 @@ func (cfg *apiConfig) handlerUploadVideo(w http.ResponseWriter, r *http.Request)
 		respondWithError(w, http.StatusInternalServerError, "Unable to upload file", err)
 		return
 	}
-	videoURL := fmt.Sprintf("https://%s.s3.%s.amazonaws.com/%s",
-		cfg.s3Bucket,
-		cfg.s3Region,
+	videoURL := fmt.Sprintf("https://%s/%s",
+		cfg.s3CfDistribution,
 		aspectRatio+"/"+hexString+".mp4")
 
 	metadata.VideoURL = &videoURL
